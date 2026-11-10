@@ -1,0 +1,27 @@
+import sys
+
+# Fallback to default values if command-line arguments are not provided
+if len(sys.argv) >= 7:
+    course1 = sys.argv[1]
+    marks1 = int(sys.argv[2])
+    course2 = sys.argv[3]
+    marks2 = int(sys.argv[4])
+    course3 = sys.argv[5]
+    marks3 = int(sys.argv[6])
+else:
+    course1 = "SE"
+    marks1 = 85
+    course2 = "SSWD"
+    marks2 = 87
+    course3 = "Devops"
+    marks3 = 90
+
+total = marks1 + marks2 + marks3
+average = total / 3
+
+print("\n--- Student Details ---")
+print(course1, ":", marks1)
+print(course2, ":", marks2)
+print(course3, ":", marks3)
+print("Total     :", total)
+print("Average   :", average)
